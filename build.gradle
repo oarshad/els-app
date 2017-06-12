@@ -1,0 +1,24 @@
+plugins {
+    id 'org.springframework.boot' version '1.5.3.RELEASE'
+}
+
+group 'com.laldinsoft.els.app'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+bootRun {
+    addResources = true
+}
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter-web:1.5.3.RELEASE"
+    compile group: 'org.springframework.data', name: 'spring-data-elasticsearch', version: '2.1.4.RELEASE'
+    compile group: 'org.elasticsearch.client', name: 'transport', version: '5.4.1'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.3.RELEASE'
+}
